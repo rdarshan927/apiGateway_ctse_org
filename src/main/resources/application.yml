@@ -11,7 +11,7 @@ spring:
       routes:
         # User Service Routes
         - id: user-service
-          uri: ${USER_SERVICE_URL:https://user-service-268672367192.us-central1.run.app}
+          uri: ${USER_SERVICE_URL:https://userservice-7mt1.onrender.com}
           predicates:
             - Path=/api/auth/**, /api/users/**
           filters:
