@@ -21,7 +21,7 @@ jobs:
 
       - name: Copy Docker project to VPS
         run: |
-          rsync -avz -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" ./ ubuntu@<VPS_IP>:~/docker-project
+          rsync -avz -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" ./ ubuntu@175.157.86.234:~/docker-project
 
       - name: Deploy Docker project on VPS
         run: |
