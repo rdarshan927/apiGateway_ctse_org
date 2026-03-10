@@ -5,7 +5,7 @@ docker stop api-gateway || true
 docker rm api-gateway || true
 
 # Build new image
-docker build -t api-gateway ./docker
+docker build -t api-gateway .
 
 # Run new container on existing npm-network
 docker run -d \
