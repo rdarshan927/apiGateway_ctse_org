@@ -12,7 +12,7 @@ spring:
       routes:
         # User Service Routes
         - id: user-service
-          uri: http://user-service:8081
+          uri: https://user-service-78514746924.europe-west1.run.app
           predicates:
             - Path=/api/auth/**, /api/users/**
           filters:
@@ -20,7 +20,7 @@ spring:
 
         # Doctor Service Routes
         - id: doctor-service
-          uri: http://doctor-service:8082
+          uri: https://doctor-service-78514746924.europe-west1.run.app
           predicates:
             - Path=/api/doctors/**, /api/slots/**
           filters:
