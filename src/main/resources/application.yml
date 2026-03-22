@@ -34,6 +34,14 @@ spring:
           filters:
             - RewritePath=/api/(?<segment>.*), /api/$\{segment}
 
+        # Updated Appointment Service Route with StripPrefix=2
+        - id: appointment-service
+          uri: https://appointment-service-78514746924.europe-west1.run.app
+          predicates:
+            - Path=/api/appointments/**
+          filters:
+            - StripPrefix=2
+
       # Global CORS configuration
       globalcors:
         corsConfigurations:
