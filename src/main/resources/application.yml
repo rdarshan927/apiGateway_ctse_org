@@ -42,6 +42,14 @@ spring:
           filters:
             - StripPrefix=2
 
+        # Patient Service Routes
+        - id: patient-service
+          uri: https://patientservice-78514746924.europe-west1.run.app
+          predicates:
+            - Path=/api/patients/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
+
       # Global CORS configuration
       globalcors:
         corsConfigurations:
