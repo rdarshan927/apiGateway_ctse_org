@@ -40,7 +40,7 @@ spring:
           predicates:
             - Path=/api/appointments/**
           filters:
-            - StripPrefix=2
+            - RewritePath=/api/(?<segment>.*), /api/$\{segment}
 
         # Patient Service Routes
         - id: patient-service
